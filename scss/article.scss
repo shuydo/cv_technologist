@@ -1,0 +1,67 @@
+@import url(https://fonts.googleapis.com/css?family=Heebo:regular,500,700,900&display=swap); // @import "vars";
+@import "vars";
+@import "comps";
+@import "header";
+@import "footer"; 
+
+.article {
+  max-width: 700px;
+  padding: 0 10px 30px;
+  margin: 0 auto;
+
+  &__title {
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 147.058824%; /* 50/34 */
+    margin-bottom: 30px; //mL m
+
+    @media (max-width: $md3) { 
+      font-size: 30px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    margin-bottom: 20px; //fL m
+  }
+
+  &__year {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff; //no var
+
+    background-color: #ff7c7c; //no var
+    border-radius: 16px;
+    height: 25px;
+    padding: 0 10px;
+    font-weight: 900;
+    font-size: 18px;
+  }
+
+  &__category {
+    font-size: 20px;
+    line-height: 125%; /* 25/20 */
+    margin-left: 25px; //fL m
+    align-self: center;
+
+    @media (max-width: $md3) {
+      font-size: 18px;
+    }
+  }
+
+  &__text {
+    p {
+      @extend .text;//forign styles import
+      margin-bottom: 20px; //fL m
+    }
+  }
+
+  img {
+    max-width: 100%;
+    margin-bottom: 20px; //fL m
+  }
+}
+
+
+

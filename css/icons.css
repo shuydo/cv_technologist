@@ -1,0 +1,29 @@
+._icon-fb .path1:before {
+  content: "\e900";
+  color: rgb(0, 0, 0);
+}
+
+._icon-fb .path2:before {
+  content: "\e901";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+
+._icon-insta:before {
+  content: "\e902";
+}
+
+._icon-linkedin .path1:before {
+  content: "\e903";
+  color: rgb(0, 0, 0);
+}
+
+._icon-linkedin .path2:before {
+  content: "\e904";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+
+._icon-twitter:before {
+  content: "\e905";
+}/*# sourceMappingURL=icons.css.map */

@@ -1,0 +1,103 @@
+// ----------------- rec posts
+.recent-posts {
+  background-color: #edf7fa; //no var //fL bg
+  padding: 25px 0 13px 0; //mb 30-17 //cхлопывание mb-s???????
+
+  @media (max-width: $md3) {
+    padding: 25px 0 23px; //-0 compensation
+  }
+
+  &__header {
+    display: flex;
+    margin-bottom: 20px; //fL m
+  }
+
+  &__title {
+    padding-right: 20px; //~if be many words //fL p
+    flex: 1 1 auto;
+    // font-size: 22px; //go to _comps
+  }
+
+  &__view-all {
+    flex: 0 0 auto; // flex-wrap: nowrap; // variants against many words in left title
+    font-size: 16px; //
+    line-height: 143.75%; /* 23/16 */ // text-align: right
+    color: #00a8cc; //no var
+
+    @media (max-width: $md3) {
+      display: none; //early hidden. must on min 320~
+    }
+  }
+
+  &__items {
+    gap: 20px; // margin: 0 -10px; //?gap
+
+    @media (min-width: $md3) {
+      display: flex;
+    }
+  }
+
+  &__column {
+    flex: 0 1 50%;
+    padding: 0 15px; //shu  10px;
+    margin-bottom: 17px; //17px; //fL m
+
+    background-color: #fff; //no var
+  }
+}
+
+.recent-post {
+  // height: 100%;  // background-color: #fff; //no var // padding: 20px;
+  box-shadow: 0 4px 10px rgba(187, 255, 250, 0.25);
+  border-radius: 4px;
+  
+
+  @media (max-width: $md3) {
+    padding: 15px;
+  }
+
+  *:last-child {
+    margin-bottom: 0; //against hanging margin
+  }
+
+  &__title {
+    display: inline-block;
+    color: inherit; //?
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 146.153846%; /* 38/26 */
+    margin-bottom: 17px; //fL m
+    //     transition: color 0.3s ease 0s;
+    padding-top: 15px; //shu
+
+    @media (min-width: $md2) {
+      &:hover {
+        color: #ff6464;
+      }
+    }
+
+    @media (max-width: $md3) {
+      font-size: 22px;
+      margin-bottom: 10px; //fL m
+    }
+  }
+
+  &__info {
+    font-size: 18px;
+    line-height: 144.444444%; /* 26/18 */
+    margin-bottom: 15px; //fL m
+
+    span {
+      margin: 0 10px;
+    }
+
+    @media (max-width: $md3) {
+      font-size: 16px;
+      margin-bottom: 10px; //fL m
+    }
+  }
+
+  &__text {
+    margin-bottom: 15px; //fL m
+  }
+}

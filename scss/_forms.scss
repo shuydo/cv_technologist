@@ -1,0 +1,21 @@
+.btn {
+  // background-color: #ff6464; //var? //b
+  // border-radius: 2px;
+  // height: 47px;
+  padding: 0px 0px; //0
+
+  display: inline-flex;
+  // align-items: center;
+  // justify-content: center;
+
+  // text-align: center;
+
+  @media (min-width: 992px) {
+    // &:hover {
+    // }
+  }
+
+  &._fw {
+    font: 100%;
+  }
+}

@@ -1,0 +1,92 @@
+@import url(https://fonts.googleapis.com/css?family=Heebo:regular,500,700,900&display=swap); // @import "vars";
+@import "vars";
+@import "comps";
+@import "header";
+@import "footer";
+
+
+.blog {
+  padding-bottom: 50px; //fL p
+
+  @media (max-width: $md3) {
+    margin-bottom: 20px; //fL m
+  }
+
+  &__title {
+    padding-bottom: 50px; //fL p
+
+    @media (max-width: $md3) {
+      margin-bottom: 30px; //fL m
+    }
+  }
+
+  // &__article-name { DELLLLLLLLLLL
+  //   display: inline-block;
+  //   color: inherit;
+  //   font-weight: 500;
+  //   font-size: 30px;
+  //   line-height: 146.666667%; /* 44/30 */
+  //   margin-bottom: 10px; //fL m
+  //   transition: color .3s;//ease 0px
+
+  //   @media (min-width: $md3) {
+  //     &:hover {
+  //       // margin-bottom: 30px; //fL m
+  //       color: #ff6464;
+  //     }
+  //   }
+  // }
+
+  &__article-name {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 146.666667%; /* 44/30 */
+    margin-bottom: 10px; //fL m
+    color: inherit; //??
+    transition: color 0.3s ease 0s;
+
+    @media (min-width: $md2) {
+      &:hover {
+        color: #ff6464; //no var
+      }
+    }
+
+    @media (max-width: $md3) {
+      font-size: 26px;
+    }
+  }
+
+  &__item {
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin: 0; //fL m
+    }
+
+    @media (max-width: $md3) {
+      margin-bottom: 25px; //fL m
+      padding-bottom: 25px; //fL p
+    }
+  }
+
+  &__info {
+    display: flex;
+    font-size: 20px;
+    margin-bottom: 10px; //fL m
+
+    @media (max-width: $md3) {
+      font-size: 16px;
+    }
+  }
+
+  &__separator {
+    margin: 0 15px; //simlify
+  }
+
+  &__category {
+    color: #8695a4; //no var
+  }
+}

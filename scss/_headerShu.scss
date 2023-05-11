@@ -1,0 +1,187 @@
+// -------------------- header
+.header {
+  position: fixed; // relative;
+  position: relative;
+  width: 100%;
+  z-index: 100; //anti menu burger troubles
+
+  &::before {
+    content: "";
+    background-color: rgba(255, 255, 255, 0.95);
+    background-color: white;
+
+    width: 100%;
+    height: 100%;
+    background: lightcyan; // white lightcyan;  // z-index: 2;  // box-shadow: 0 0 3px;
+
+    position: absolute;
+    top: 0;
+    z-index: 1;
+  }
+
+  &__content {
+    max-width: 1052px; // 1152px;
+    padding: 0 10px;
+    margin: 0 auto; //??
+  }
+
+  &__menu {
+    height: 82px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; //but this x-centring!
+    padding: 10px 0; //~
+  }
+}
+
+.menu {
+  &__body {
+    position: fixed;
+    z-index: 1;
+  }
+
+  &__list {
+    // height: 82px;
+    // display: flex;
+    // align-items: center;
+    // justify-content: flex-end;
+    // padding: 10px 0; //~ 5 sting up to header__menu
+
+    li {
+      margin: 0 0 30px 0;
+      // margin-bottom: 10px; //fL m
+      &:last-child {
+        margin: 0; //fL m0-0-0-0
+      }
+    }
+  }
+
+  &__link {
+    font-size: 20px;
+    font-weight: 500;
+    color: #000; //no var
+    transition: color 0.3s; // ease 0s; //snip?
+  }
+}
+
+.icon-menu {
+  display: none;
+}
+// ============================= bPoints ===================
+@media (min-width: $md3) {
+  .menu {
+    &__list {
+      display: flex;
+      li {
+        // margin: 0 33px 0 0; //interest //4 1st is
+        margin-right: 33px;
+      }
+    }
+
+    // &__list {
+    //   font-size: 40px;
+    //   display: block;
+    //   text-align: center;
+    // }
+  }
+}
+// --------------------------------------------------------------
+@media (max-width: $md3) {
+  .header__menu {
+    height: 50px;
+  }
+
+  .menu {
+    &__body {
+      //       //3?
+      // position: fixed;
+      left: 0;
+
+      // top: 0;
+      // transform: translateY(-100%); //fL w/o Y & (0,100%)
+      // transition: transform 0.8s;// ease 0s;
+      // --------------------------------
+      top: -120%;
+      // transform: translateY(-100%); //fL w/o Y & (0,100%)
+      transition: top 0.8s; // ease 0s;
+      // --------------------------------
+      width: 100%;
+      height: 100%;
+      overflow: auto; // scroll if mnu overscreen
+      padding: 70px 10px 30px 10px;
+      background-color: rgba(255, 255, 255, 0.95);
+
+      &.active {
+        // transform: translateY(0); //fL translate
+        // ---------------------------------
+        top: 0;
+      }
+    }
+
+    &__link {
+      font-size: 40px;
+      display: block;
+      text-align: center;
+    }
+  }
+
+  .icon-menu {
+    position: relative;
+    z-index: 3; // 5;
+    display: block;
+    width: 30px;
+    height: 18px;
+    cursor: pointer;
+
+    & span,
+    &::before,
+    &::after {
+      position: absolute;
+      left: 0;
+      height: 10%;
+      width: 100%;
+      background-color: #000;
+      transition: all 0.3s; //ease 0s
+    }
+
+    & span {
+      top: 50%;
+      transform: scale(1) translateY(-50%); //fL translate(0, -50%);
+    }
+
+    &::before,
+    &::after {
+      content: "";
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+
+    &.active {
+      & span {
+        transform: scale(0); //translateY(-50%) hide middle bar burger
+      }
+
+      &::before {
+        top: 50%;
+        transform: rotate(315deg) translateY(-50%); //-45
+      }
+
+      &::after {
+        bottom: 50%;
+        transform: rotate(45deg) translateY(50%);
+      }
+    }
+  }
+}
+// -------------------------------------------------------------- >992 (no more touchScreen)
+@media (min-width: $md2) {
+  .menu__link:hover {
+    color: #ff6464; //no var
+  }
+}
