@@ -204,7 +204,7 @@ body.lock {
     padding: 70px 10px 30px 10px;
     background-color: rgba(255, 255, 255, 0.95);
   }
-  .menu__body._active {
+  .menu__body.active {
     top: 0;
   }
   .menu__link {
@@ -241,14 +241,14 @@ body.lock {
   .icon-menu::after {
     bottom: 0;
   }
-  .icon-menu._active span {
+  .icon-menu.active span {
     transform: scale(0);
   }
-  .icon-menu._active::before {
+  .icon-menu.active::before {
     top: 50%;
     transform: rotate(315deg) translateY(-50%);
   }
-  .icon-menu._active::after {
+  .icon-menu.active::after {
     bottom: 50%;
     transform: rotate(45deg) translateY(50%);
   }

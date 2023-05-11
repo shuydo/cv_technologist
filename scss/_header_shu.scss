@@ -1,23 +1,7 @@
 // -------------------- header
 .header {
-  position: fixed; // relative;
   position: relative;
-  width: 100%;
   z-index: 100; //anti menu burger troubles
-
-  &::before {
-    content: "";
-    background-color: rgba(255, 255, 255, 0.95);
-    background-color: white;
-
-    width: 100%;
-    height: 100%;
-    background: lightcyan; // white lightcyan;  // z-index: 2;  // box-shadow: 0 0 3px;
-
-    position: absolute;
-    top: 0;
-    z-index: 1;
-  }
 
   &__content {
     max-width: 1052px; // 1152px;
@@ -35,11 +19,6 @@
 }
 
 .menu {
-  &__body {
-    position: fixed;
-    z-index: 1;
-  }
-
   &__list {
     // height: 82px;
     // display: flex;
@@ -94,7 +73,7 @@
   .menu {
     &__body {
       //       //3?
-      // position: fixed;
+      position: fixed;
       left: 0;
 
       // top: 0;
@@ -111,7 +90,7 @@
       padding: 70px 10px 30px 10px;
       background-color: rgba(255, 255, 255, 0.95);
 
-      &.active {
+      &._active {
         // transform: translateY(0); //fL translate
         // ---------------------------------
         top: 0;
@@ -162,7 +141,7 @@
       bottom: 0;
     }
 
-    &.active {
+    &._active {
       & span {
         transform: scale(0); //translateY(-50%) hide middle bar burger
       }
@@ -179,6 +158,7 @@
     }
   }
 }
+
 // -------------------------------------------------------------- >992 (no more touchScreen)
 @media (min-width: $md2) {
   .menu__link:hover {

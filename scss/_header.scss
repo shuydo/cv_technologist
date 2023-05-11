@@ -90,7 +90,7 @@
       padding: 70px 10px 30px 10px;
       background-color: rgba(255, 255, 255, 0.95);
 
-      &._active {
+      &.active {
         // transform: translateY(0); //fL translate
         // ---------------------------------
         top: 0;
@@ -141,7 +141,7 @@
       bottom: 0;
     }
 
-    &._active {
+    &.active {
       & span {
         transform: scale(0); //translateY(-50%) hide middle bar burger
       }
